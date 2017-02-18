@@ -177,4 +177,75 @@
             right 让元素显示在右浮动的元素下面，不过仍然围着左浮动的元素
             both 强制让元素显示在左浮动和右浮动的元素下面
             ```
+* 背景图
+    
+    ```
+    background-attachment
+        scroll 背景图与文本和页面中的其他内容一起滚动
+        fixed  把背景图固定在某个位置
+    background-origin 重新定义图像的起点
+        border-box: 从边框的左上角开始放置背景图
+        padding-box: 从内边距的左上角开始放置背景图
+        content-box: 从内容区域的左上角开始放置
+    background-size
+        contain 根据元素的背景尺寸强制调整图像的尺寸
+        cover 强制让图像的宽度适应元素的宽度，让图像的高度适应元素的高度，而且不破坏图像的纵横比
+    background-image: url(...) center top no-repeat,
+                      url(...) center center no-repeat,
+                      url(...) center bottom no-repeat
+                      
+    ```   
+ * CSS 变形，过渡和动画
+ 
+    ```
+    transform 使用这个属性时要指定变形的类型以及表示变形程度的值
+        rotate(deg) 顺时针旋转
+        scale(n) 放大n倍 负数则翻转
+        translate(x, y) 平移
+        skew(deg, deg) 倾斜
+        translateZ(0) 表示用GPU加载
+    transform-origin 修改变形原点
+    
+    过渡满足的条件
+        两个样式
+        transition属性
+            transition-property 指定要以动画方式变化的属性(所有属性则用all)
+            transition-duration 指定动画持续时间长度
+        触发器
+            transition-tinming-function 动画的速率
+                linear
+                ease
+                ease-in
+                ease-out
+                ease-in-out
+            transition-delay 延迟动画的加载
+            
+    动画
+        css过渡只能把一系列CSS属性葱一个状态变到另外一个状态，css动画则能把一系列CSS属性从一个状态变到另一个状态。再变到第三个状态还可以继续变化，还可以重播动画，暂停动画，倒播动画
+        
+        创建动画两步
+            1. 定义动画， 设置关键帧，列出要变化的css属性
+            2. 把动画应用到元素上
+        
+        @keyframse animationName {
+            from {
+                // ...
+            }
+            to {
+                // ...
+            }
+        }
+        
+        .className {
+            animation-name: animationName;
+            animation-duration: time;
+        }
+         
+         animation-timing-function  控制整个动画的播放速率
+         animation-iteration-count 播放次数
+         animation-direction 播放的方向
+         animation-play-state running paused
+    ``` 
+    
+
 
