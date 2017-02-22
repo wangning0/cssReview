@@ -249,7 +249,7 @@
     
 * 浮动的问题
     
-        ```
+        
         解决方案
             1. 在外层元素的底部添加一个元素，清除浮动
             2. 浮动外层元素
@@ -257,13 +257,13 @@
             4. :after {
                     content: " "
                 }
-        ```
+        
 
 * 如何让分栏看起来等高
         
-        ```
+        
         https://css-tricks.com/fluid-width-equal-height-columns/
-        ```
+        
  * 响应式Web布局
  
     ```
